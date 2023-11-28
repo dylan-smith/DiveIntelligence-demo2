@@ -1,0 +1,22 @@
+{
+	"name": "DiveIntelligence Dev Container",
+	"image": "mcr.microsoft.com/devcontainers/typescript-node:1-18-bullseye",
+	"features": {
+		"ghcr.io/devcontainers/features/azure-cli:1": {},
+		"ghcr.io/devcontainers-contrib/features/angular-cli:2": {},
+		"ghcr.io/devcontainers-contrib/features/jfrog-cli-npm:1": {}
+	},
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"Angular.ng-template",
+				"EditorConfig.EditorConfig",
+				"GitHub.copilot",
+				"esbenp.prettier-vscode",
+				"github.vscode-github-actions"
+			]
+		}
+	},
+
+	"onCreateCommand": "cd /workspaces/DiveIntelligence-demo2/src/DivingCalculator.Web && npm ci && ng build"
+}
